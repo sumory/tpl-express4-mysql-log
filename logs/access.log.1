@@ -1,0 +1,30 @@
+[2014-08-20 16:00:09.588] [INFO] app - 127.0.0.1 - - "GET /user/users HTTP/1.1" 200 16 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36"
+[2014-08-20 16:00:19.794] [INFO] console - Server listening on port 3000 , env is production
+[2014-08-20 16:00:24.716] [INFO] console - connected as id 131
+[2014-08-20 16:00:24.720] [ERROR] db - { [Error: ER_NO_SUCH_TABLE: Table 'test.user' doesn't exist]
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlState: '42S02',
+  index: 0 }
+Error: ER_NO_SUCH_TABLE: Table 'test.user' doesn't exist
+    at Query.Sequence._packetToError (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/sequences/Sequence.js:48:14)
+    at Query.ErrorPacket (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/sequences/Query.js:82:18)
+    at Protocol._parsePacket (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Protocol.js:270:23)
+    at Parser.write (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Parser.js:77:12)
+    at Protocol.write (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/Connection.js:82:28)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:746:14)
+    at Socket.EventEmitter.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:408:10)
+    --------------------
+    at Protocol._enqueue (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Protocol.js:135:48)
+    at PoolConnection.Connection.query (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/Connection.js:184:25)
+    at /data/workspace/nodejs/express4_mysql_common_tpl/lib/db.js:24:15
+    at Pool.<anonymous> (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/Pool.js:51:14)
+    at Handshake.Sequence.end (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/sequences/Sequence.js:96:24)
+    at Handshake.Sequence.OkPacket (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/sequences/Sequence.js:105:8)
+    at Protocol._parsePacket (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Protocol.js:270:23)
+    at Parser.write (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Parser.js:77:12)
+    at Protocol.write (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/data/workspace/nodejs/express4_mysql_common_tpl/node_modules/mysql/lib/Connection.js:82:28)

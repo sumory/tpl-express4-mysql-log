@@ -1,0 +1,12 @@
+<h1><%= msg %></h1>
+<h2>
+<%if(locals.error && error.status){%>
+<%= error.status %>
+<%}%>
+</h2>
+
+<pre>
+<%if(locals.error && error.status){%>
+<%= error.stack %>
+<%}%>
+</pre>

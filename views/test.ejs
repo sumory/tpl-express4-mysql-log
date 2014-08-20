@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script src='http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js'></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+	<form action="/test" method="post">
+		Your name: <input type="text" name="userName">
+		<button type="submit">Submit</button>
+	</form>
+ 	<br>Your name from your session is: <strong><%if(name){%><%=name%><%}%></strong>
+ 	<br><a href="javascript:void(0)" onclick='test404()'>test404</a>
+	 <br><a href="javascript:void(0)" onclick='test500ajax()'>test500ajax</a>
+ 	<script>
+ 		function test404() {
+            $.ajax({
+                url : 'http://localhost:3000/test/a',
+                type : 'post',
+                data : {},
+                dataType : 'json',
+                success : function(result) {
+          
+                    console.dir(result);
+                },
+                error : function() {
+                	console.log('error');
+                }
+            });
+        }
+ 		function test500ajax() {
+            $.ajax({
+                url : 'http://localhost:3000/test/test',
+                type : 'post',
+                data : {},
+                dataType : 'json',
+                success : function(result) {
+          
+                    console.dir(result);
+                },
+                error : function() {
+                	console.log('error');
+                }
+            });
+        }
+ 	</script>
+
+  </body>
+</html>
