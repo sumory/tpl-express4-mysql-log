@@ -11,7 +11,7 @@ var log4js = require('log4js');
 
 var logger =  require('./lib/log.js').logger('app');
 var route = require('./route.js');
-var config = require('./config.js');
+var config = require('./config');
 
 var cookie = cookieParser(config.sessionSecret);
 var app = express();

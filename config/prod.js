@@ -8,7 +8,7 @@ module.exports = {
 	staticPath: path.join(__dirname, 'public'),
 	uploadDir: path.join(__dirname, 'public/uploads'),
 
-	env: 'production',
+	env: 'prod',
 	logfile: 'logs/access.log',
 
 	sessionSecret: 'session_secret_random_seed',
@@ -17,5 +17,6 @@ module.exports = {
 	host: "localhost",
 	user: "root",
 	password: "",
-	database: "test"
+	database: "test",
+	enableDBLog: false
 };

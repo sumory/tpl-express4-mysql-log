@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var format = require('util').format;
-var config = require('../config.js');
+var config = require('../config');
 
+
+//uri: upload/img
 router.get('/img', function(req, res) {
 	res.render('upload', {});
 });
 
+//uri: upload/img
 router.post('/img', function(req, res, next) {
 	// the uploaded file can be found as `req.files.image` and the
 	// title field as `req.body.title` 

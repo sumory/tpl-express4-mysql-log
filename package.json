@@ -2,13 +2,20 @@
     "name": "",
     "version": "0.0.1",
     "private": true,
+    "engines": {
+        "node": ">=0.10.x"
+    },
+    "author": {
+        "name": "sumory.wu",
+        "email": "sumory.wu@gmail.com"
+    },
     "scripts": {
-        "start": "node ./app.js"
+        "start": "node ./app.js",
+        "test": "make test"
     },
     "dependencies": {
         "express": "~4.0.0",
         "static-favicon": "~1.0.0",
-        "morgan": "~1.0.0",
         "cookie": "0.1.0",
         "cookie-parser": "~1.0.1",
         "body-parser": "~1.0.0",
@@ -21,5 +28,9 @@
         "async": "0.8.0",
         "mysql": "2.4.2",
         "log4js": "0.6.16"
+    },
+    "devDependencies": {
+        "should": "*",
+        "mocha": "*"
     }
 }

@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
 	res.render('test', {
-		title: 'Hello World',
+		title: 'Hello, this is a test page',
 		name: req.session.user ? req.session.user.username || '' : ''
 	});
 });
@@ -12,8 +12,7 @@ router.post('/', function(req, res) {
 	req.session.user = {
 		username: req.body.userName
 	};
-	//console.log(req.session.user.username);
-	res.redirect('/');
+	res.redirect('/test');//test为绝对uri路径
 });
 
 
@@ -26,4 +25,4 @@ router.post('/test', function(req, res, next) {
 });
 
 
-module.exports = router;
+module.exports = router;	

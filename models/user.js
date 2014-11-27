@@ -18,3 +18,8 @@ exports.queryUser=function(username, password){
 exports.queryUsers=function(callback){
 	db.query("select * from test", [], callback);
 };
+
+
+exports.queryUserByUsername=function(username, callback){
+	db.query("select * from test where username=?", [username], callback);
+};

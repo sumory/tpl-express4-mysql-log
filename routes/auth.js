@@ -1,4 +1,3 @@
-var config = require('../config.js').config;
 var user = require('../models/user.js');
 var express = require('express');
 var router = express.Router();
@@ -31,7 +30,7 @@ router.post('/login', function(req, res, next) {
             req.session.user = { // 保存用户信息到session
                 username: username
             };
-            res.send("login success: ", username);
+            res.send("login success: "+username);
         } else {
             res.render('error', {
                 msg: "用户不存在"
