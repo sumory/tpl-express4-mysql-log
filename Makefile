@@ -1,9 +1,10 @@
 TESTS = test/*.test.js
 TIMEOUT = 200000
 REPORTER = spec
+NODE_ENV = dev
 
 test:
-	@NODE_ENV=test ./node_modules/mocha/bin/mocha \
+	@NODE_ENV= ${NODE_ENV} ./node_modules/mocha/bin/mocha \
 		--timeout $(TIMEOUT) \
 		--reporter ${REPORTER} \
 		$(TESTS)
