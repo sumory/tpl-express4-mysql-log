@@ -4,12 +4,12 @@ module.exports = {
 	port: 3000,
 	viewEngine: 'ejs',
 
-	views: path.join(__dirname, 'views'),
-	staticPath: path.join(__dirname, 'public'),
-	uploadDir: path.join(__dirname, 'public/uploads'),
+	views: path.resolve(__dirname, '..', 'views'),
+	staticPath: path.resolve(__dirname, '..', 'public'),
+	uploadDir: path.resolve(__dirname, '..', 'public/uploads'),
 
 	env: 'prod',
-	logfile: 'logs/access.log',
+	logfile: path.resolve(__dirname, '..', 'logs/access.log'),
 
 	sessionSecret: 'session_secret_random_seed',
 
