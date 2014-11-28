@@ -4,7 +4,7 @@ REPORTER = spec
 NODE_ENV = dev
 
 test:
-	@NODE_ENV= ${NODE_ENV} ./node_modules/mocha/bin/mocha \
+	@NODE_ENV=${NODE_ENV} ./node_modules/mocha/bin/mocha \
 		--timeout $(TIMEOUT) \
 		--reporter ${REPORTER} \
 		$(TESTS)
