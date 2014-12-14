@@ -18,5 +18,10 @@ module.exports = {
 	user: "root",
 	password: "",
 	database: "test",
-	enableDBLog: false
+	enableDBLog: false,
+
+	winston:{
+		exceptionFile:path.resolve(__dirname, '..', 'logs/exceptions.log'),
+		dailyRotateFile:path.resolve(__dirname, '..', 'logs/daily.log')
+	}
 };
